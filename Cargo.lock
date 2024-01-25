@@ -13,7 +13,7 @@ dependencies = [
 
 [[package]]
 name = "block-hand-provided_code-generator"
-version = "0.1.0"
+version = "0.0.1"
 dependencies = [
  "bs58",
  "rand",
