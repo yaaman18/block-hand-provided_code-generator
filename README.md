@@ -63,3 +63,43 @@ SHA-3の信頼性: SHA-3は米国国立標準技術研究所(NIST)によって�
 SHA-3は、入力に対して高い感度を持ち、ハッシュの衝突耐性が非常に高いです。
 
 ランダム性の組み合わせ: 複数のランダムソース（CSPRNG、システム時刻、SHA-3ハッシュ）を組み合わせることで、単一ソースに依存するよりも高いランダム性が得られます。
+
+
+
+## ライセンス
+Copyright © 2024 Solidity Materials Co., Ltd. All Rights Reserved.
+
+## 免責事項
+このソフトウェアは「現状のまま」提供されており、商品性、特定目的への適合性、および権利侵害を含め、明示的または暗黙的ないかなる保証も伴いません。作者または著作権所有者は、契約、不法行為、またはその他の形態にかかわらず、このソフトウェアの使用またはその他の取引から生じるいかなるクレーム、損害も保証しません
+
+
+# Random Base58 String Generator
+
+## Overview
+This Rust-based application generates random 16-character Base58 strings. It combines current system time and random bytes, hashes them using SHA3-256, and encodes the hash into a Base58 string. This is particularly useful for generating unique identifiers or tokens.
+
+## Features
+- **Base58 Encoding**: Utilizes Base58 encoding for the generated strings.
+- **SHA3-256 Hashing**: Hashes combined time and random bytes using SHA3-256 for uniqueness.
+- **Randomness**: Ensures randomness with the combination of system time and random bytes from `OsRng`.
+
+## Usage
+Running the application will generate and print ten random 16-character Base58 strings.
+
+## How to Run
+1. Ensure Rust is installed.
+2. Clone the repository.
+3. Run `cargo run` to execute the application.
+
+## Dependencies
+- `rand` for generating random numbers.
+- `bs58` for Base58 encoding.
+- `sha3` for SHA3-256 hashing.
+
+## License
+Copyright © 2024 Solidity Materials Co., Ltd. All Rights Reserved.
+
+## Disclaimer
+This software is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall the authors or copyright holders be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.
+
+---
